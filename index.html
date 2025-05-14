@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina Beauty Solutions - Presentazione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -66,37 +69,57 @@
 
         <!-- Slide 3: HydraGlow Bio-Serum - Icona di Innovazione -->
         <section class="slide" id="slide3">
-            <div class="slide-content slide-flex product-showcase-container">
-                <div class="product-image-container half-width animated-image">
-                    <img src="assets/hydraglow.jpg" alt="HydraGlow Bio-Serum">
-                    <p class="caption">HydraGlow Bio-Serum (30ml)</p>
-                </div>
-                <div class="product-info-container half-width">
-                    <header>
-                        <h2 class="animated-title"><span class="brand-name">HydraGlow</span> Bio-Serum</h2>
-                        <p class="subtitle animated-subtitle">L'innovazione che illumina la tua pelle.</p>
-                    </header>
-                    <div class="product-details animated-list-left">
-                        <h3>Prodotto di Punta</h3>
-                        <ul>
-                            <li><strong>Formato:</strong> 30 ml siero, 75g totali.</li>
-                            <li><strong>Dimensioni:</strong> Ø 3cm × H 10cm.</li>
-                        </ul>
-                        <h3>Packaging Eco-Chic</h3>
-                        <ul>
-                            <li>Flacone in vetro riciclato.</li>
-                            <li>Box cartone FSC soft-touch.</li>
-                            <li>Etichette FSC, inchiostri vegetali.</li>
-                        </ul>
+            <div class="slide-content">
+                <header class="product-header animated-title">
+                    <h2 class="animated-title"><span class="brand-name">HydraGlow</span> Bio-Serum</h2>
+                    <p class="subtitle animated-subtitle">L'innovazione che illumina la tua pelle.</p>
+                </header>
+
+                <div class="slide-flex product-slide-layout">
+                    <div class="product-image-column animated-image">
+                        <img src="assets/hydraglow.jpg" alt="HydraGlow Bio-Serum">
+                        <p class="caption">HydraGlow Bio-Serum (30ml) - <em>Dove la scienza incontra la pelle.</em></p>
                     </div>
-                    <div class="product-technical-features animated-list-left">
-                        <h3>Caratteristiche Tecniche di Spicco</h3>
-                        <ul>
-                            <li><strong>Tecnologia Bio-Serum Avanzata:</strong> Rilascio mirato e profondo degli attivi.</li>
-                            <li><strong>Microcapsule Vitaminiche (C+E):</strong> Potente azione antiossidante e illuminante.</li>
-                            <li><strong>Idratazione Multi-Livello:</strong> Acido Ialuronico per un'idratazione intensa e duratura.</li>
-                            <li><strong>Effetto Glow Istantaneo:</strong> Pelle radiosa e rivitalizzata dalla prima applicazione.</li>
-                        </ul>
+                    <div class="product-details-column">
+                        <h3 class="animated-heading">Scheda Tecnica Prodotto</h3>
+                        <table class="product-specs-table animated-text-block">
+                            <tbody>
+                                <tr>
+                                    <td>Contenuto:</td>
+                                    <td>30 ml siero trasparente, microcapsule vitaminiche.</td>
+                                </tr>
+                                <tr>
+                                    <td>Peso Flacone Pieno:</td>
+                                    <td>75 g.</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensioni Flacone:</td>
+                                    <td>Ø 3 cm × H 10 cm.</td>
+                                </tr>
+                                <tr>
+                                    <td>Flacone:</td>
+                                    <td>Vetro riciclato dal design minimale.</td>
+                                </tr>
+                                <tr>
+                                    <td>Astuccio:</td>
+                                    <td>Cartone FSC certificato, finitura soft-touch.</td>
+                                </tr>
+                                <tr>
+                                    <td>Etichettatura:</td>
+                                    <td>Carta FSC, inchiostri a base vegetale.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="details-group animated-list-left">
+                            <h3>Benefici & Tecnologia Avanzata</h3>
+                            <ul>
+                                <li><strong>Tecnologia Bio-Serum:</strong> Rilascio mirato e profondo degli attivi.</li>
+                                <li><strong>Vitamine C+E Microincapsulate:</strong> Potente azione antiossidante e illuminante.</li>
+                                <li><strong>Idratazione Multi-Livello:</strong> Acido Ialuronico per idratazione intensa.</li>
+                                <li><strong>Effetto Glow Immediato:</strong> Pelle radiosa e rivitalizzata.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,8 +150,8 @@
     </div>
 
     <div class="navigation-buttons">
-        <button id="prevBtn" aria-label="Slide precedente">←</button>
-        <button id="nextBtn" aria-label="Slide successiva">→</button>
+        <button id="prevBtn" aria-label="Slide precedente"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+        <button id="nextBtn" aria-label="Slide successiva"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
     </div>
 
     <script src="script.js"></script>
