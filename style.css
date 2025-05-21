@@ -509,7 +509,7 @@ body {
      .slide-content {
         max-width: 100%; 
     }
-}
+} 
 
 #slide4 .slide-content > header {
     margin-bottom: 1.5rem; /* Riduciamo o azzeriamo il margine se necessario */
@@ -605,4 +605,36 @@ body {
 #slide2 .slide-content {
     position: relative;
     z-index: 1;
+}
+
+.phone-button {
+    display: inline-block;
+    background-color: #fff; /* Sfondo bianco */
+    color: #333; /* Testo scuro */
+    padding: 12px 25px;
+    border-radius: 25px; /* Bordi arrotondati */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px; /* Spazio sopra il pulsante */
+    border: 2px solid #C0A080; /* Bordo che richiama i colori del brand */
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.phone-button:hover, .phone-button:focus {
+    background-color: #C0A080; /* Colore del brand al passaggio del mouse */
+    color: #fff; /* Testo bianco al passaggio del mouse */
+    border-color: #C0A080;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.final-statement-alt a {
+    color: inherit; /* Mantiene il colore del testo del paragrafo */
+    text-decoration: underline; /* Sottolinea per indicare che è un link */
+}
+
+.final-statement-alt a:hover {
+    color: #C0A080; /* Colore del brand al passaggio del mouse */
 } 
