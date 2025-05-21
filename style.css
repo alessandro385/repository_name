@@ -471,45 +471,184 @@ body {
 
 @media (max-width: 768px) {
     .slide {
-        padding: 30px 20px;
+        padding: 25px 15px; /* Padding ridotto */
     }
     .slide header h1, .slide header h2 {
-        font-size: 2.4em; 
+        font-size: 2em; /* Dimensione h1/h2 ridotta */
+        line-height: 1.25;
     }
     .slide .subtitle {
-        font-size: 1.1em;
-        margin-bottom: 20px;
+        font-size: 1em; /* Dimensione sottotitolo ridotta */
+        margin-bottom: 15px;
     }
+
+    /* Testi generali ridotti */
     .company-intro p, .company-details ul li, .product-line p, .clients, .why-us ul li, .final-cta p,
     .product-details-column .details-group ul li, .product-specs-table td {
-        font-size: 0.9em;
+        font-size: 0.85em; /* Ulteriore riduzione per leggibilità */
+        line-height: 1.6;
     }
+
+    .company-details h2, .portfolio h3, .why-us h3, .call-to-action h3,
+    .product-details-column .details-group h3,
+    .product-details-column > h3.animated-heading {
+        font-size: 1.5em; /* Dimensione h3 ridotta */
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+    }
+
     .company-details ul li, .product-details-column .details-group ul li, .why-us ul li {
-        padding-left: 25px;
+        padding-left: 20px; /* Padding lista ridotto */
+        margin-bottom: 8px;
     }
     .company-details ul li::before, .product-details-column .details-group ul li::before, .why-us ul li::before {
-        font-size: 1.2em;
-        left: 2px;
+        font-size: 1.1em; /* Icona lista leggermente più piccola */
+        left: 0;
     }
+
+    /* Slide 1 */
+    #slide1 .image-content img {
+        max-height: 200px; /* Altezza immagine sede ridotta */
+    }
+
+    /* Slide 2 */
     .product-lines {
-        flex-direction: column;
-        gap: 15px;
+        gap: 12px; /* Gap ridotto per product lines */
     }
     .product-line {
-        padding: 20px;
+        padding: 15px; /* Padding interno product-line ridotto */
     }
+    .product-line h4 {
+        font-size: 1.2em;
+    }
+    .background-image-container-slide2 {
+        opacity: 0.8; /* Aumentiamo leggermente l'opacità di petali.png se necessario o la diminuiamo */
+    }
+     .background-image-container-slide2 img {
+        opacity: 0;
+        transform: scale(0.8); /* Potrebbe essere necessario iniziare più grande per mobile */
+    }
+    @keyframes zoomAndFadeIn { /* Ridefiniamo per mobile se l'originale non va bene */
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 0.2; /* Opacità petali per mobile, potrebbe essere necessario aggiustarla */
+            transform: scale(1);
+        }
+    }
+
+
+    /* Slide 3 */
+    .product-slide-layout .product-image-column img {
+        max-width: 200px; /* Immagine prodotto ridotta */
+    }
+    .product-specs-table {
+        font-size: 0.8em; /* Testo tabella specifiche ulteriormente ridotto */
+    }
+     .product-slide-layout .product-image-column .caption {
+        font-size: 0.8em;
+    }
+
+    /* Slide 4 */
+    .background-image-container { /* Sfondo orchidea su mobile */
+        width: 70%; /* Adattiamo la larghezza */
+        height: 60%; /* e l'altezza */
+        top: 10%;
+        left: -15%; /* Spostiamola un po' più a sinistra */
+        opacity: 0.3; /* Riduciamo opacità */
+    }
+     @keyframes fadeInAndRise { /* Ridefiniamo animazione orchidea per mobile */
+        from {
+            opacity: 0;
+            transform: translateY(15px) scale(1.03) rotate(0deg);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotate(-20deg); /* Rotazione e scala leggermente diverse */
+        }
+    }
+    .final-cta h3 {
+        font-size: 1.6em; /* Titolo CTA */
+    }
+    .final-cta p {
+        font-size: 0.9em; /* Testo CTA */
+    }
+    .final-cta .final-statement-alt {
+        font-size: 1em; /* Testo "Iniziamo oggi" */
+    }
+    .phone-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        width: 90%; /* Pulsante telefono a larghezza maggiore */
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Per far funzionare width e margin auto */
+        box-sizing: border-box;
+    }
+
+
     .navigation-buttons button {
-        width: 40px;
-        height: 40px;
+        width: 38px; /* Bottoni navigazione più piccoli */
+        height: 38px;
     }
     .navigation-buttons button svg {
-        width: 20px;
-        height: 20px;
+        width: 18px; /* Icone SVG più piccole */
+        height: 18px;
     }
      .slide-content {
         max-width: 100%; 
+        padding-left: 5px; /* Leggero padding per non attaccare il testo ai bordi */
+        padding-right: 5px;
     }
 } 
+
+/* Media Query per schermi molto piccoli, es. iPhone SE o simili */
+@media (max-width: 380px) {
+    .slide header h1, .slide header h2 {
+        font-size: 1.7em;
+    }
+    .slide .subtitle {
+        font-size: 0.9em;
+    }
+    .company-intro p, .company-details ul li, .product-line p, .clients, .why-us ul li, .final-cta p,
+    .product-details-column .details-group ul li, .product-specs-table td {
+        font-size: 0.8em;
+    }
+    .company-details h2, .portfolio h3, .why-us h3, .call-to-action h3,
+    .product-details-column .details-group h3,
+    .product-details-column > h3.animated-heading {
+        font-size: 1.3em;
+    }
+    .product-line h4 {
+        font-size: 1.1em;
+    }
+    .final-cta h3 {
+        font-size: 1.4em;
+    }
+     .background-image-container { /* Orchidea su schermi piccolissimi */
+        width: 80%; 
+        height: 50%;
+        top: 15%;
+        left: -20%;
+        opacity: 0.25;
+    }
+    @keyframes fadeInAndRise { /* Ridefiniamo animazione orchidea per mobile molto piccolo */
+        from {
+            opacity: 0;
+            transform: translateY(10px) scale(1) rotate(0deg);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(0.95) rotate(-22deg); 
+        }
+    }
+    .phone-button {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+}
 
 #slide4 .slide-content > header {
     margin-bottom: 1.5rem; /* Riduciamo o azzeriamo il margine se necessario */
