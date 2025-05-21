@@ -509,4 +509,100 @@ body {
      .slide-content {
         max-width: 100%; 
     }
+}
+
+#slide4 .slide-content > header {
+    margin-bottom: 1.5rem; /* Riduciamo o azzeriamo il margine se necessario */
+    border-bottom: none; /* Rimuoviamo esplicitamente il bordo */
+}
+
+.background-image-container {
+    position: absolute;
+    top: 5%; /* Leggermente spostato verso il basso */
+    left: 0%; /* Spostato più a destra */
+    width: 50%; /* Leggermente più largo */
+    height: 90%; /* Leggermente più corto */
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.6; /* Opacità aumentata per maggiore visibilità */
+}
+
+.background-image-container img {
+    width: auto;
+    height: 100%; /* Mantiene l'altezza completa del contenitore */
+    object-fit: cover; /* Copre l'area mantenendo le proporzioni */
+    object-position: left center; /* Posiziona l'immagine a sinistra */
+    opacity: 0; /* Inizia trasparente per l'animazione */
+}
+
+.slide.active .animated-background-image {
+    animation: fadeInAndRise 1.2s 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInAndRise {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(1.05) rotate(0deg);
+    }
+    to {
+        opacity: 1; /* L'opacità finale del contenitore è 0.6, qui l'immagine diventa visibile nel suo contenitore */
+        transform: translateY(0) scale(1) rotate(-15deg); /* Rotazione aumentata */
+    }
+}
+
+.why-us {
+    margin-top: 0; /* Rimuoviamo il margine superiore per eliminare lo spazio */
+}
+
+#slide4 .final-cta h3 {
+    border-bottom: none; /* Rimuove la linea sotto l'h3 specifico */
+    margin-bottom: 0.5em; /* Manteniamo un po' di spazio se necessario, o aggiustiamo il padding del paragrafo sottostante */
+    padding-bottom: 0; /* Rimuove il padding che potrebbe contribuire allo spazio */
+}
+
+#slide4 .final-cta p:first-of-type {
+    margin-top: 0.5em; /* Aggiustiamo il margine superiore del paragrafo per compensare la rimozione del bordo e padding dell'h3 */
+}
+
+/* Stili per sfondo Slide 2 */
+.background-image-container-slide2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    display: flex; /* Per centrare l'immagine */
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image-container-slide2 img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(0.5); /* Parte più piccola dal centro */
+}
+
+.slide.active .animated-background-image-slide2 {
+    animation: zoomAndFadeIn 1.2s 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes zoomAndFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 0.3; /* Opacità finale per lo sfondo */
+        transform: scale(1);
+    }
+}
+
+/* Assicuriamoci che il contenuto della slide 2 sia sopra lo sfondo */
+#slide2 .slide-content {
+    position: relative;
+    z-index: 1;
 } 
